@@ -1,11 +1,11 @@
 import {
-  AddressStepPage,
-  LoginPage,
   MenuContentPage,
-  PaymentStepPage,
   ProductsListPage,
-  ShippingSteptPage,
   ShopingCartPage,
+  LoginPage,
+  AddressStepPage,
+  ShippingSteptPage,
+  PaymentStepPage,
 } from "../page/index";
 
 const email = "aperdomobo@gmail.com";
@@ -15,9 +15,9 @@ const menuContentPage = new MenuContentPage();
 const productListPage = new ProductsListPage();
 const shopingCartPage = new ShopingCartPage();
 const loginPage = new LoginPage();
-const paymentStepPage = new PaymentStepPage();
 const addressStepPage = new AddressStepPage();
 const shippingSteptPage = new ShippingSteptPage();
+const paymentStepPage = new PaymentStepPage();
 
 describe("Buy a t-shirt", () => {
   it("then should be bought a t-shirt", () => {
@@ -37,5 +37,3 @@ describe("Buy a t-shirt", () => {
         "Your order on My Store is complete.");
   });
 });
-
-

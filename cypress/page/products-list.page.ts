@@ -2,11 +2,13 @@ class ProductsListPage {
   private addToCart: string;
   private containerCart: string;
   private product: string;
+  private buttonContainer: string;
 
   constructor() {
     this.containerCart = ".available-now";
-    this.addToCart = ".button.ajax_add_to_cart_button.btn.btn-default";
-    this.product = ".button-container span .icon-chevron-right";
+    this.addToCart = ".ajax_add_to_cart_button span";
+    this.product = "Proceed to checkout";
+    this.buttonContainer = ".button-container";
   }
 
   public goToAddToCart(): void {
@@ -15,7 +17,7 @@ class ProductsListPage {
   }
 
   public goToCheckout(): void {
-    cy.get(this.product).click();
+    cy.contains(this.buttonContainer, this.product).click();
   }
 }
 

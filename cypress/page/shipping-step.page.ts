@@ -1,10 +1,10 @@
 class ShippingSteptPage {
   private termsOfService: string;
-  private proceedToCheckoutButton: string;
+  private processCarrier: string;
 
   constructor() {
     this.termsOfService = "#cgv";
-    this.proceedToCheckoutButton = ".cart_navigation.clearfix > button";
+    this.processCarrier = "processCarrier";
   }
 
   public acceptTermsOfService(): void {
@@ -12,7 +12,7 @@ class ShippingSteptPage {
   }
 
   public goToCheckout(): void {
-    cy.get(this.proceedToCheckoutButton).click();
+    cy.get(`[name=${this.processCarrier}]`).click();
   }
 }
 
